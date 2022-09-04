@@ -15,6 +15,29 @@ body {
   background-size: cover;
 }
 
+/* Default style---------- */
+
+/* Buttons---------- */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+
+.left .btn:hover {
+  border: 1px solid #212529;
+}
+
+.right .btn:hover {
+  background-color: rgba(209, 93, 106, 0.761);
+}
+
+.right .active {
+  background-color: rgba(239, 37, 60, 0.761) !important;
+}
+
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
 }
