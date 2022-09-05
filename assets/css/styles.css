@@ -38,6 +38,47 @@ body {
   background-color: rgba(239, 37, 60, 0.761) !important;
 }
 
+/* ---------- */
+
+.left,
+.right {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.wrapper {
+  width: 80vw;
+  margin: 0 auto;
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 5px;
+}
+
+.left .btn:not(.btn:last-of-type),
+.right .btn:not(.btn:last-of-type) {
+  margin-right: 5px;
+}
+
+.preview-img {
+  width: 100%;
+  height: 100%;
+  margin: 15px 0;
+}
+
+.preview-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
 }
