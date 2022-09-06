@@ -75,16 +75,50 @@ body {
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
+  .wrapper {
+    width: 80vw;
+    flex-direction: row;
+  }
+
+  .left,
+  .right {
+    width: auto;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .preview-img {
+    margin: 0 35px;
+  }
+
+  .btn {
+    background-color: #f8f9fa;
+  }
+
+  .btn span {
+    font-size: 24px;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  .wrapper {
+    width: 70vw;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  .wrapper {
+    width: 700px;
+  }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+  .wrapper {
+    margin-top: 15vh;
+    width: 800px;
+    height: 400px;
+  }
 }
