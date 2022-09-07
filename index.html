@@ -17,85 +17,102 @@
   </head>
   <body>
     <section class="wrapper">
-      <ul class="left">
-        <li
-          class="btn tooltip"
-          id="chooseImage"
-          data-tooltip="Choose image"
-          data-tooltip-pos="left"
-        >
-          <span class="material-symbols-outlined"> add </span>
-        </li>
+      <header>
+        <h1>Photo editor</h1>
+      </header>
 
-        <li
-          class="btn tooltip"
-          id="removeImage"
-          data-tooltip="Remove image"
-          data-tooltip-pos="left"
-        >
-          <span class="material-symbols-outlined"> delete_forever </span>
-        </li>
+      <main>
+        <ul class="left">
+          <li
+            class="btn tooltip"
+            id="chooseImage"
+            data-tooltip="Choose image"
+            data-tooltip-pos="left"
+          >
+            <span class="material-symbols-outlined"> add </span>
+          </li>
 
-        <li
-          class="btn tooltip"
-          id="resetFilter"
-          data-tooltip="Reset filter"
-          data-tooltip-pos="left"
-        >
-          <span class="material-symbols-outlined"> restart_alt </span>
-        </li>
+          <li
+            class="btn tooltip"
+            id="removeImage"
+            data-tooltip="Remove image"
+            data-tooltip-pos="left"
+          >
+            <span class="material-symbols-outlined"> delete_forever </span>
+          </li>
 
-        <li
-          class="btn tooltip"
-          id="save"
-          data-tooltip="Save"
-          data-tooltip-pos="left"
-        >
-          <span class="material-symbols-outlined"> save </span>
-        </li>
-      </ul>
+          <li
+            class="btn tooltip"
+            id="resetFilter"
+            data-tooltip="Reset filter"
+            data-tooltip-pos="left"
+          >
+            <span class="material-symbols-outlined"> restart_alt </span>
+          </li>
 
-      <div class="preview-img">
-        <img src="assets/images/perviewImg.png" alt="" />
-      </div>
+          <li
+            class="btn tooltip"
+            id="save"
+            data-tooltip="Save"
+            data-tooltip-pos="left"
+          >
+            <span class="material-symbols-outlined"> save </span>
+          </li>
+        </ul>
 
-      <ul class="right">
-        <li
-          class="btn tooltip"
-          id="brightness"
-          data-tooltip="Brightness"
-          data-tooltip-pos="right"
-        >
-          <span class="material-symbols-outlined"> light_mode </span>
-        </li>
+        <div class="preview-img">
+          <img src="assets/images/perviewImg.png" alt="" />
+        </div>
 
-        <li
-          class="btn tooltip"
-          id="saturation"
-          data-tooltip="Saturation"
-          data-tooltip-pos="right"
-        >
-          <span class="material-symbols-outlined"> invert_colors </span>
-        </li>
+        <ul class="right">
+          <li
+            class="btn tooltip"
+            id="brightness"
+            data-tooltip="Brightness"
+            data-tooltip-pos="right"
+          >
+            <span class="material-symbols-outlined"> light_mode </span>
+          </li>
 
-        <li
-          class="btn tooltip"
-          id="inversion"
-          data-tooltip="Inversion"
-          data-tooltip-pos="right"
-        >
-          <span class="material-symbols-outlined"> shuffle </span>
-        </li>
+          <li
+            class="btn tooltip"
+            id="saturation"
+            data-tooltip="Saturation"
+            data-tooltip-pos="right"
+          >
+            <span class="material-symbols-outlined"> invert_colors </span>
+          </li>
 
-        <li
-          class="btn tooltip"
-          id="grayscale"
-          data-tooltip="Grayscale"
-          data-tooltip-pos="right"
-        >
-          <span class="material-symbols-outlined"> contrast </span>
-        </li>
-      </ul>
+          <li
+            class="btn tooltip"
+            id="inversion"
+            data-tooltip="Inversion"
+            data-tooltip-pos="right"
+          >
+            <span class="material-symbols-outlined"> shuffle </span>
+          </li>
+
+          <li
+            class="btn tooltip"
+            id="grayscale"
+            data-tooltip="Grayscale"
+            data-tooltip-pos="right"
+          >
+            <span class="material-symbols-outlined"> contrast </span>
+          </li>
+        </ul>
+      </main>
+
+      <footer class="disable">
+        <div class="filter-container">
+          <div class="filter-info">
+            <p class="name">Brightness</p>
+            <p class="value">40%</p>
+          </div>
+
+          <input type="range" min="0" max="200" value="40" name="" id="" />
+        </div>
+      </footer>
     </section>
     <!-- Javascript---------- -->
     <script src="assets/js/script.js"></script>
