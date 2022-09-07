@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 li {
@@ -36,16 +37,6 @@ body {
 }
 
 /* ---------- */
-
-.left,
-.right {
-  width: 75%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-}
-
 .wrapper {
   width: 80vw;
   margin: 0 auto;
@@ -53,6 +44,30 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+main {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.left,
+.right {
+  width: 75%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.right.disable,
+footer.disable,
+.preview-img.disable {
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 .btn {
@@ -73,10 +88,59 @@ body {
   object-fit: contain;
 }
 
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-left: 3px solid #4c5c68;
+  border-right: 3px solid #4c5c68;
+}
+
+footer .filter-container {
+  width: 70%;
+}
+
+footer .filter-info {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer .filter-info p:first-child {
+  font-size: 10vw;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  height: 50px;
+  line-height: 30px;
+  color: #343a40;
+}
+
+footer .filter-info p:last-child {
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+
+footer input {
+  width: 100%;
+  height: 7px;
+  accent-color: #595959;
+}
+
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
   .wrapper {
     width: 80vw;
+    flex-direction: column;
+  }
+
+  main {
     flex-direction: row;
   }
 
@@ -98,6 +162,10 @@ body {
   .btn span {
     font-size: 24px;
   }
+
+  footer p {
+    font-size: 35px !important;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -117,7 +185,7 @@ body {
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
   .wrapper {
-    margin-top: 15vh;
+    margin-top: 5vh;
     width: 800px;
     height: 400px;
   }
