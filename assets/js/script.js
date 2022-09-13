@@ -33,7 +33,7 @@ const loadImage = () => {
 
 // The given value is applied
 const applyFilter = () => {
-  previewImage.style.filter = `brightness(${brightness}%) saturation(${saturation}%) invert(${inversion}%) grayscale(${grayScale})`;
+  previewImage.style.filter = `brightness(${brightness}%) saturate(${saturation}%) invert(${inversion}%) grayscale(${grayScale}%)`;
 };
 
 // Control buttons are recognized and activated by clicking and their information is displayed
@@ -75,7 +75,38 @@ filterOption.forEach((option) => {
   });
 });
 
+// It is a function to register the process value in the filter properties
+const updateFilter = () => {
+  filterValue.innerHTML = `${progressInput.value}%`;
+  const selectFilter = document.querySelector(".right .active");
+
+  switch (selectFilter.id) {
+    case "brightness": {
+      brightness = progressInput.value;
+      break;
+    }
+
+    case "saturation": {
+      saturation = progressInput.value;
+      break;
+    }
+
+    case "inversion": {
+      inversion = progressInput.value;
+      break;
+    }
+
+    case "grayScale": {
+      grayScale = progressInput.value;
+      break;
+    }
+  }
+
+  applyFilter();
+};
+
 // click + button
 quickAccess[0].addEventListener("click", () => fileInput.click());
 //--
 fileInput.addEventListener("change", loadImage);
+progressInput.addEventListener("input", updateFilter);
