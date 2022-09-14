@@ -105,8 +105,21 @@ const updateFilter = () => {
   applyFilter();
 };
 
+// It is related to the reset button. Whenever it is clicked, the changes revert back to the original version
+const resetFilter = () => {
+  brightness = "100";
+  saturation = "100";
+  inversion = "0";
+  grayScale = "0";
+
+  filterOption[0].click();
+
+  applyFilter();
+};
+
 // click + button
 quickAccess[0].addEventListener("click", () => fileInput.click());
 //--
 fileInput.addEventListener("change", loadImage);
 progressInput.addEventListener("input", updateFilter);
+quickAccess[2].addEventListener("click", resetFilter);
