@@ -117,9 +117,16 @@ const resetFilter = () => {
   applyFilter();
 };
 
+// By clicking on the Delete button, the selected photo is deleted and the changes are returned to the original state
+const deletePhoto = () => {
+  quickAccess[2].click();
+  previewImage.src = "";
+};
+
 // click + button
 quickAccess[0].addEventListener("click", () => fileInput.click());
 //--
 fileInput.addEventListener("change", loadImage);
 progressInput.addEventListener("input", updateFilter);
 quickAccess[2].addEventListener("click", resetFilter);
+quickAccess[1].addEventListener("click", deletePhoto);
