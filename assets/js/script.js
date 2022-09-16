@@ -123,6 +123,32 @@ const deletePhoto = () => {
   previewImage.src = "";
 };
 
+// This function is executed whenever the download button is clicked. Downloads the current photo
+const saveImage = () => {
+  const canvas = document.createElement("canvas");
+
+  const ctx = canvas.getContext("2d");
+  canvas.width = previewImage.naturalWidth;
+  canvas.height = previewImage.naturalHeight;
+
+  ctx.filter = `brightness(${brightness}%) saturate(${saturation}%) invert(${inversion}%) grayscale(${grayScale}%)`;
+  ctx.translate(canvas.width / 2, canvas.height / 2);
+
+  ctx.drawImage(
+    previewImage,
+    -canvas.width / 2,
+    -canvas.height / 2,
+    canvas.width,
+    canvas.height
+  );
+
+  const link = document.createElement("a");
+  link.download = "image.jpg";
+
+  link.href = canvas.toDataURL();
+  link.click();
+};
+
 // click + button
 quickAccess[0].addEventListener("click", () => fileInput.click());
 //--
@@ -130,3 +156,4 @@ fileInput.addEventListener("change", loadImage);
 progressInput.addEventListener("input", updateFilter);
 quickAccess[2].addEventListener("click", resetFilter);
 quickAccess[1].addEventListener("click", deletePhoto);
+quickAccess[3].addEventListener("click", saveImage);
